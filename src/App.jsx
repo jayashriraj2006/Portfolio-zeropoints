@@ -1,7 +1,19 @@
-import Founder from "./pages/Founder";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Founder from "./pages/founder";
+import Contact from "./pages/contact";
 
 function App() {
-  return <Founder />;
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Founder />} />
+
+        <Route path="/contact" element={<Contact />} />
+  
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
